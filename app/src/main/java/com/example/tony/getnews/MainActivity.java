@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectDiskReads().detectDiskWrites().detectNetwork().penaltyLog().build());
         try{
-            news = getReversedNews(1,20);
+            news = ReversedNews.getReversedNews(1,20);
         }catch(IOException e){
             news = e.toString();
         }
@@ -57,18 +57,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
-    public String getReversedNews(int page, int pagesize) throws IOException
-    {
-        URL website = new URL("http://166.111.68.66:2042/news/action/query/latest?pageNo="+page+"&pageSize="+pagesize);
-        HttpURLConnection con = (HttpURLConnection)website.openConnection();
-        InputStreamReader in = new InputStreamReader(con.getInputStream(),"utf-8");
-        BufferedReader buffer = new BufferedReader(in);
-        String response,result = "";
-        while ((response = buffer.readLine())!=null)
-        {
-            result += response;
-        }
-        return result;
     }
 }
