@@ -5,7 +5,7 @@ package com.example.tony.getnews;
  */
 import java.util.List;
 
-public class NewsTitle
+public class NewsTitle //新闻标题
 {
         List<MyList> list;
         int pageNo,pageSize,totalPages,totalRecords;

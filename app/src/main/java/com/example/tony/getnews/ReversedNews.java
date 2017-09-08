@@ -10,7 +10,7 @@ import java.net.URL;
  * Created by MacheNike on 2017/9/8.
  */
 
-public class ReversedNews
+public class ReversedNews //连接服务器
 {
     static  public String getReversedNews(int page, int pagesize) throws IOException
     {
@@ -26,3 +26,4 @@ public class ReversedNews
         return result;
     }
 }
+

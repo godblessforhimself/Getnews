@@ -2,7 +2,7 @@ package com.example.tony.getnews;
 
 import java.util.List;
 
-public class NewsText
+public class NewsText //新闻正文
 {
     class Person
     {

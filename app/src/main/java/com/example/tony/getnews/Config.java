@@ -3,10 +3,10 @@ package com.example.tony.getnews;
 import android.content.Context;
 
 /**
- * Created by MacheNike on 2017/9/8.
+ * Created by LTL on 2017/9/8.
  */
 import android.content.SharedPreferences;
-public class Config
+public class Config //用户设置保持
 {
     static public void Save(String key,String value,Context context)
     {
