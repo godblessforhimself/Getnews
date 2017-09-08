@@ -18,6 +18,6 @@ public class Config //用户设置保持
     static public String load(String key,Context context)
     {
         SharedPreferences sharedPref = context.getSharedPreferences("tony.xml",Context.MODE_PRIVATE);
-        return sharedPref.getString(key,"default");
+        return sharedPref.getString(key,"0");
     }
 }
